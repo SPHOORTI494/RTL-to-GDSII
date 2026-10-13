@@ -1,0 +1,46 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : counter8bit
+Version: U-2022.12-SP7
+Date   : Tue Oct 13 14:11:34 2026
+****************************************
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: count_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: count[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  counter8bit        ForQA                 saed32rvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  count_reg[0]/CLK (DFFARX1_RVT)           0.00       0.00 r
+  count_reg[0]/Q (DFFARX1_RVT)             0.22       0.22 r
+  count[0] (out)                           0.00       0.22 r
+  data arrival time                                   0.22
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  clock uncertainty                       -0.20       9.80
+  output external delay                   -1.00       8.80
+  data required time                                  8.80
+  -----------------------------------------------------------
+  data required time                                  8.80
+  data arrival time                                  -0.22
+  -----------------------------------------------------------
+  slack (MET)                                         8.58
+
+
+1
